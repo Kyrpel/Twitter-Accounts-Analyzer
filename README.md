@@ -1,6 +1,6 @@
-# Cyprus Twitter Accounts Analyzer
+# Twitter Accounts Analyzer
 
-This project is a Twitter data analysis tool that fetches tweets from Twitter using the Twitter API, saves the tweets and user data into a MongoDB database, and then displays the results in a Streamlit app. The tool is specifically designed to analyze Twitter accounts in Cyprus.
+This project is a Twitter data analysis tool that fetches tweets from Twitter using the Twitter API, saves the tweets and user data into a local MongoDB database, and then displays the results in a Streamlit app. The tool is specifically designed to analyze Twitter accounts in based on geoloaction.
 
 ## Project Structure
 
@@ -14,9 +14,10 @@ The project consists of several Python scripts:
 
 ## How to Run
 
-1. Run the `main.py` script to fetch and save the tweets and users. You can do this in your terminal with the command `python main.py`.
+1. Run the `main.py` script to fetch and save the tweets and users.
+   '''python main.py'''
 
-2. After the `main.py` script has finished executing, run the `streamlit_app.py` script to display the results. You can do this in your terminal with the command `streamlit run streamlit_app.py`.
+3. After the `main.py` script has finished executing, run the `streamlit_app.py` script to display the results. `streamlit run streamlit_app.py`.
 
 Please note that you need to run these commands in the directory where your scripts are located. Also, make sure that you have installed all the necessary packages and that your MongoDB server is running.
 
