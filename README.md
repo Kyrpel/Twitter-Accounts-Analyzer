@@ -15,7 +15,8 @@ The project consists of several Python scripts:
 ## How to Run
 
 1. Run the `main.py` script to fetch and save the tweets and users.
-   '''python main.py'''
+```bash
+python main.py
 
 3. After the `main.py` script has finished executing, run the `streamlit_app.py` script to display the results. `streamlit run streamlit_app.py`.
 
