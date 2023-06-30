@@ -23,7 +23,7 @@ if __name__ == "__main__":
     tweet_extractor = TweetExtractor()
 
 
-    tweets = api.get_tweets("*", "35.1856,33.3823,100km", None, 1000)
+    tweets = api.get_tweets("*", "35.1856,33.3823,100km", None, 20000)
     saver.save_tweets_to_db(tweets, db.get_collection("tweets_streamlit2"))
 
     # users = MongoDB('localhost', 27017, 'twitter').get_collection("users_streamlit2")

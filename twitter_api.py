@@ -9,7 +9,7 @@ class TwitterAPI:
         self.api = tweepy.API(auth)
 
     def get_tweets(self, query, geocode, lang, num_tweets, count=100):
-        print("In get tweets function")
+        print("Getting tweets...")
         tweets = []
         max_id = None
 
@@ -24,8 +24,8 @@ class TwitterAPI:
                 max_id = tweets[-1].id - 1  # prepare the `max_id` for the next batch
 
             except tweepy.errors.TooManyRequests:
-                print("Rate limit exceeded. Sleeping for 15 minutes.")
-                time.sleep(900)  # sleep for 15 minutes
+                # use tab and write a message to the user
+                print("\tRate limit exceeded. Sleeping for 15 minutes.")                time.sleep(900)  # sleep for 15 minutes
                 continue
 
         return tweets
