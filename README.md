@@ -19,7 +19,10 @@ The project consists of several Python scripts:
 python main.py
 ````
 
-3. After the `main.py` script has finished executing, run the `streamlit_app.py` script to display the results. `streamlit run streamlit_app.py`.
+3. After the `main.py` script has finished executing, run the `streamlit_app.py` script to display the results.
+   ```
+   streamlit run streamlit_app.py
+   ```
 
 Please note that you need to run these commands in the directory where your scripts are located. Also, make sure that you have installed all the necessary packages and that your MongoDB server is running.
 
@@ -34,4 +37,7 @@ This project requires the following Python packages:
 - `matplotlib`: To create the plots for the data visualization.
 
 You can install these packages with pip:
+```
+pip install tweepy pandas streamlit pymongo matplotlib
+```
 
