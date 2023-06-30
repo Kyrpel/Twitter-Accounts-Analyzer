@@ -6,7 +6,7 @@ This project is a Twitter data analysis tool that fetches tweets from Twitter us
 
 The project consists of several Python scripts:
 
-- `twitter_api.py`: This script contains the `TwitterAPI` class, which is used to interact with the Twitter API. It fetches tweets based on a query and geolocation, and also fetches the top retweeted tweets of a user.
+- `twitter_api.py`: This script contains the `TwitterAPI` class, which is used to interact with the Twitter API. It fetches tweets based on a query and geolocation, and also fetches the top retweeted tweets of a user. Credentials are fetched from a tokens.csv file located in your root directory.
 
 - `main.py`: This script is responsible for fetching the tweets and saving them to the MongoDB database. It also extracts and saves the users to the database.
 
@@ -20,9 +20,9 @@ python main.py
 ````
 
 3. After the `main.py` script has finished executing, run the `streamlit_app.py` script to display the results.
-   ```
-   streamlit run streamlit_app.py
-   ```
+```
+streamlit run streamlit_app.py
+```
 
 Please note that you need to run these commands in the directory where your scripts are located. Also, make sure that you have installed all the necessary packages and that your MongoDB server is running.
 
