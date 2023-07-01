@@ -25,13 +25,24 @@ class TwitterAPI:
 
             except tweepy.errors.TooManyRequests:
                 # use tab and write a message to the user
-                print("\tRate limit exceeded. Sleeping for 15 minutes.")                time.sleep(900)  # sleep for 15 minutes
+                print("\tRate limit exceeded. Sleeping for 15 minutes.")                
+                time.sleep(900)  # sleep for 15 minutes
                 continue
 
         return tweets
     
 
-
+    def fetch_user_by_location(self, num_of_users):
+        print("Fetching users by location...")
+        try: 
+                
+            locations = ["Cyprus", "Nicosia", "Limassol", "Larnaca", "Paphos", "Ayia Napa"]
+            query = " OR ".join(locations)
+            users = tweepy.Cursor(self.api.search_users, q=query).items(num_of_users)
+        except tweepy.error.TooManyRequests:
+            print("\tRate limit exceeded. Sleeping for 15 minutes.")                
+            time.sleep(900)
+        return users
 
     def fetch_top_retweets(self, user):
         # Fetch user's timeline in descending order of retweet count
